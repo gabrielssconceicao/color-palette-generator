@@ -4,11 +4,15 @@
     box-sizing: border-box;
 }
 
+html{
+    font-size: 62.5%;
+}
 
 
 .pallete{
     background-color: aliceblue;
     display: flex;
+    flex-direction: column;
     width: 100vw;
     height: 100vh;
     border: 1px solid #000;
@@ -26,12 +30,15 @@
 .pallete .color:last-child{
     border-right: none
 }
+.pallete .color-name {
+    font-family: monospace;
+    font-size: 3rem;
+    color: #fff;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.418);
+}
 
 
-@media(max-width: 768px){
-    .pallete{
-        flex-direction: column;
-    }
+@media(max-width: 767px){
     .pallete .color{
         flex: 1;
         border-bottom: 1px solid #000;
@@ -40,4 +47,8 @@
     .pallete .color:last-child{
         border-bottom: none;
     }
+    .pallete .color-name{
+        font-size: 2rem;
+    }
 }
+
